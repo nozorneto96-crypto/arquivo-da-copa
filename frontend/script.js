@@ -1,5 +1,5 @@
 // Troque pela URL pública do backend depois do deploy no Render.
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "https://arquivo-da-copa-api.onrender.com";
 
 const STORAGE_KEY = "arquivo-da-copa-front-v1";
 
