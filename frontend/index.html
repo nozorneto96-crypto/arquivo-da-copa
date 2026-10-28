@@ -1,1 +1,101 @@
-<!-- Arquivo temporário: será substituído pelo frontend real -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arquivo da Copa</title>
+    <meta
+      name="description"
+      content="Chat especialista em Copas do Mundo: finais, seleções, artilheiros, estádios e a taça de 1930 a 2026."
+    />
+    <meta name="theme-color" content="#08140e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;0,9..144,680;1,9..144,560&family=Outfit:wght@380;500;640&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="dossier">
+        <div class="brand">
+          <div>
+            <p class="kicker">Programa oficial</p>
+            <h1>Arquivo <em>da</em> Copa</h1>
+          </div>
+          <svg class="trophy" viewBox="0 0 48 48" aria-hidden="true">
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              d="M14 8h20v8a10 10 0 0 1-20 0V8zM18 28h12l2 6H16l2-6zM16 40h16M10 10H6a8 8 0 0 0 8 10M38 10h4a8 8 0 0 1-8 10"
+            />
+          </svg>
+        </div>
+        <p class="lede">
+          Um cronista só da Copa do Mundo. História, seleções, taças e a final de Nova Jersey.
+        </p>
+        <article class="last-cup">
+          <p class="kicker">Última taça</p>
+          <div class="cup-row">
+            <span class="flag" data-flag="es"></span>
+            <div>
+              <p class="cup-name">Espanha</p>
+              <p class="muted">2026 · 1–0 · Argentina</p>
+            </div>
+          </div>
+          <p class="cup-note">
+            Ferran Torres, 106'. MetLife Stadium. Segundo título espanhol, dezesseis anos depois da África do Sul.
+          </p>
+          <p class="hosts">
+            Sedes
+            <span class="flag flag-sm" data-flag="us"></span>
+            <span class="flag flag-sm" data-flag="mx"></span>
+            <span class="flag flag-sm" data-flag="ca"></span>
+          </p>
+        </article>
+        <p class="kicker editions-label">Campeões</p>
+        <div id="editions" class="editions"></div>
+      </aside>
+
+      <section class="chat">
+        <header class="chat-bar">
+          <div>
+            <p class="chat-title">Mesa do arquivista</p>
+            <p class="muted">Só Copa do Mundo · respostas em português</p>
+          </div>
+          <button id="clear" type="button" class="ghost">Limpar</button>
+        </header>
+        <div id="transcript" class="transcript" aria-live="polite"></div>
+        <form id="composer" class="composer">
+          <div id="alert" class="alert" hidden></div>
+          <div id="prompts" class="prompts"></div>
+          <div class="row">
+            <label class="sr" for="message">Pergunta sobre a Copa do Mundo</label>
+            <textarea
+              id="message"
+              rows="2"
+              maxlength="2000"
+              placeholder="Pergunte sobre uma Copa, uma final, um estádio…"
+              required
+            ></textarea>
+            <button id="send" type="submit" aria-label="Enviar">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                  d="M4 12h14M13 6l6 6-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
